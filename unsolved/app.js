@@ -11,7 +11,18 @@ console.log('Your JS file is linked!');
 // Reference Codecademy lessons: Introduction- Arithmetic Opertaors, Conditional Statements lessons 3, 4, 5,and 9
 
 //Write your code for FizzBuzz below this line:
-
+let myNumber = 1;
+if (typeof myNumber !== 'number') {
+    console.log('This is not a number');
+} else if (myNumber % 3 ===0) {
+    console.log('Fizz');
+} else if (myNumber % 5 ===0) {
+    console.log('Buzz');
+} else if (myNumber % 3 && myNumber % 5 ===0) {
+    console.log('FizzBuzz');
+} else {
+    console.log(myNumber)
+}
 
 
 
@@ -36,3 +47,6 @@ console.log('Your JS file is linked!');
 // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 
 //Write your code below this line:
+function getRandomInt(min = 50,max = 101) {
+    return Math.random() * (max - min) + min;
+}
