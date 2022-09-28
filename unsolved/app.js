@@ -27,7 +27,6 @@ if (typeof myNumber !== 'number') {
 
 
 //2. E-Commerce Item list
-
 // Use a swtich statement to print the price of the each item in the store to the console.
 // Ex. If the value of the variable is 'shoes' then, the statement "Shoes are $50" should be printed to the console.
 // Reference: Codecademy lesson 10
@@ -39,6 +38,24 @@ if (typeof myNumber !== 'number') {
 // If the variable input is not an item in the store, then print 'Invalid Item' to the console.
 
 //Write your code for the E-Commerce item list below this line:
+let storeItem = prompt('Please choose an item from this list: Shoes, Jeans, Hat, Socks')
+//let storeItem = 'Shirt';
+switch(storeItem) {
+    case 'Shoes':
+        console.log('Shoes are $50');
+        break;
+    case 'Jeans':
+        console.log('Jeans are $25');
+        break;
+    case 'Hat':
+        console.log('Hat is $12');
+        break;
+    case 'Socks':
+        console.log('Socks are $2');
+        break;
+    default:
+        console.log('Item not in store');
+}
 
 
 
@@ -47,6 +64,8 @@ if (typeof myNumber !== 'number') {
 // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 
 //Write your code below this line:
-function getRandomInt(min = 50,max = 101) {
-    return Math.random() * (max - min) + min;
+function getRandomInt(min =50,max =101) {
+    return Math.floor(Math.random() * (max - min) + min);
 }
+
+console.log(getRandomInt());
